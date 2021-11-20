@@ -1,0 +1,20 @@
+fileA=input("Main file location is:")
+fileB=input("To be swapped file location is:")
+def swapper() :
+    print("the main file location chosen is:",fileA)
+    print("the swapper file location chosen is:",fileB)
+    
+    mainFile=open(fileA,'r')
+    dataA=mainFile.read()
+    swapperFile=open(fileB,'r')
+    dataB=swapperFile.read()
+    mainFile=open(fileA,'w')
+    swappedDataA=mainFile.write("")
+    swappedDataA=mainFile.write(dataB)
+    print(swappedDataA)
+    
+    swapperFile=open(fileB,'w')
+    swappedDataB=swapperFile.write("")
+    swappedDataB=swapperFile.write(dataA)
+    print(swappedDataB)
+swapper()    
